@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.red{
+    color: red;
+}
+
+.btn-success {
+    color: white !important;
+    background-color: green !important;
+  }
+  .btn-danger {
+    color: white !important;
+    background-color: tomato !important;
+  }
+  

@@ -1,0 +1,22 @@
+<h1>Cart List</h1>
+
+<button class="btn btn-success" (click)="checkout()" *ngIf="cartList.length"> Checkout</button>
+<table class="table"  *ngIf="cartList.length">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Category</th>
+        <th>Action</th>
+    </tr>
+
+    <tr *ngFor="let prod of cartList;let i =index;">
+        <td>{{prod.id}}</td>
+        <td>{{prod.name}}</td>
+        <td>{{prod.price}}</td>
+        <td><input type="number" [(ngModel)]="prod['quantity']" (change)="updateCart()"></td>
+        <td>{{prod.category}}</td>
+        <td><button class="btn btn-danger" (click)="deleteCart(i)">Delete</button></td>
+    </tr>
+</table>

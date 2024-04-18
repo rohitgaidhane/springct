@@ -1,0 +1,90 @@
+<button type="button" class="btn btn-primary" (click)="openModal(template)">Add</button>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h1>{{isEdit ? 'Edit':'Add'}} Product </h1>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container">
+            <form [formGroup]="productForm" (ngSubmit)="!isEdit ? submit():update()">
+                <label>
+                    Name
+                </label>
+                <input formControlName="name" class="form-control" type="text">
+                <small class="red" *ngIf="!getName.valid && (getName.touched || getName.dirty)">Name Reuired</small>
+                <br>
+                <label>
+                    Price
+                </label>
+                <input formControlName="price" class="form-control" type="number">
+                <small class="red" *ngIf="!getPrice.valid && (getPrice.touched || getPrice.dirty)">Price
+                    Reuired</small>
+                <br>
+                <label>
+                    Quantity
+                </label>
+                <input formControlName="quantity" class="form-control" type="number">
+                <small class="red" *ngIf="!getQuantity.valid && (getQuantity.touched || getQuantity.dirty)">Quantity
+                    Reuired</small>
+
+
+                <br>
+                <label>
+                    Category
+                </label>
+                <select formControlName="category" class="form-control">
+
+                    <option *ngFor="let c of catList" value="{{c}}"> {{c}}</option>
+                </select>
+                <small class="red" *ngIf="!getCategory.valid && (getCategory.touched || getCategory.dirty)">Category
+                    Reuired</small>
+
+                <br>
+                <button type="submit" [disabled]="!productForm.valid" class="btn btn-success">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</ng-template>
+
+<h1>Product List</h1>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Category</th>
+        <th>Action</th>
+    </tr>
+
+    <tr *ngFor="let prod of productList;let i =index;">
+        <td>{{prod.id}}</td>
+        <td>{{prod.name}}</td>
+        <td>{{prod.price}}</td>
+        <td>{{prod.quantity}}</td>
+        <td>{{prod.category}}</td>
+        <td><button (click)="edit(i,template)" class="btn btn-success">Edit</button><button class="btn btn-danger"
+                (click)="deleteProd(i)">Delete</button></td>
+    </tr>
+</table>
+
+
+
+
+<h1>Category List</h1>
+<table class="table">
+    <tr>
+        <th>Sr No.</th>
+
+        <th>Category</th>
+    </tr>
+
+    <tr *ngFor="let c of catList;let i =index;">
+        <td>{{i}}</td>
+        <td>{{c}}</td>
+    </tr>
+</table>

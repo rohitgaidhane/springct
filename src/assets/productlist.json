@@ -1,0 +1,100 @@
+{
+    "productList": 
+    [{
+      "id": 101,
+      "name": "T-Shirt",
+      "price": 499,
+      "quantity": 2,
+      "category": "Clothing"
+    }, {
+      "id": 102,
+      "name": "Tops",
+      "price": 399,
+      "quantity": 4,
+      "category": "Clothing"
+    }, {
+      "id": 103,
+      "name": "Jeans",
+      "price": 899,
+      "quantity": 3,
+      "category": "Clothing"
+    }, {
+      "id": 104,
+      "name": "Sarees",
+      "price": 1499,
+      "quantity": 3,
+      "category": "Clothing"
+    }, {
+      "id": 201,
+      "name": "Kettle",
+      "price": 749,
+      "quantity": 2,
+      "category": "Appliances"
+    }, {
+      "id": 202,
+      "name": "Vacuum Cleaner",
+      "price": 4699,
+      "quantity": 1,
+      "category": "Appliances"
+    }, {
+      "id": 203,
+      "name": "Electric Grill",
+      "price": 1898,
+      "quantity": 2,
+      "category": "Appliances"
+    }, {
+      "id": 204,
+      "name": "Water Heater",
+      "price": 596,
+      "quantity": 4,
+      "category": "Appliances"
+    }, {
+      "id": 301,
+      "name": "Multigrain Energy Bars",
+      "price": 400,
+      "quantity": 2,
+      "category": "Healthy Food"
+    }, {
+      "id": 302,
+      "name": "Mixed Nuts",
+      "price": 424,
+      "quantity": 3,
+      "category": "Healthy Food"
+    }, {
+      "id": 303,
+      "name": "Breakfast Protein variety",
+      "price": 290,
+      "quantity": 5,
+      "category": "Healthy Food"
+    }, {
+      "id": 304,
+      "name": "Flavored Melts",
+      "price": 280,
+      "quantity": 3,
+      "category": "Healthy Food"
+    }, {
+      "id": 401,
+      "name": "Hand Sanitizer",
+      "price": 100,
+      "quantity": 2,
+      "category": "Essentials"
+    }, {
+      "id": 402,
+      "name": "Face Mask",
+      "price": 40,
+      "quantity": 4,
+      "category": "Essentials"
+    }, {
+      "id": 403,
+      "name": "Hand Wash",
+      "price": 75,
+      "quantity": 2,
+      "category": "Essentials"
+    }, {
+      "id": 404,
+      "name": "Disinfectant Liquid",
+      "price": 119,
+      "quantity": 1,
+      "category": "Essentials"
+    }]
+  }
